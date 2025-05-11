@@ -31,18 +31,18 @@ type[2] = OPTIONTYPE_INT
 type[3] = OPTIONTYPE_MSGBOX_INT
 
 // "general purpose" values: storage for menu options that differs per type
-// bbol: none
+// bool: option to set to 0 when set to 1, -1 if none
 // int: minimum value
 // msgbox_int: message text
-gp1[0] = 0
+gp1[0] = 1
 gp1[1] = 0
 gp1[2] = 1
 gp1[3] = "Enter the seed for random numbers (0-10 digits, -1 = random seed)#Note that this is independent from the file's item randomization seed"
 
-// bool: none
+// bool: unused
 // int: maximum value
 // msgbox_int: message box callback ID for AsyncDialog
-gp2[0] = 0
-gp2[1] = 0
+gp2[0] = -1
+gp2[1] = -1
 gp2[2] = 120
 gp2[3] = 0

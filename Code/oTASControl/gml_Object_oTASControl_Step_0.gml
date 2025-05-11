@@ -7,6 +7,12 @@ else
 // check keys
 if keyboard_check_pressed(vk_return)
 {
+    // set the TAS mode based on the settings
+    if status[0] == 1
+        global.tasMode = 1
+    if status[1] == 1
+        global.tasMode = 2
+
     global.gameSpeed = status[2]
     if joystick_exists(global.opjoyid)
         global.joydetected = 1
@@ -14,6 +20,10 @@ if keyboard_check_pressed(vk_return)
         global.joydetected = 0
     oControl.init = 0
     room_change(19, 0) // go to the controller splash screen
+    if global.tasMode == 1
+        instance_create(0, 0, oRecord)
+    if global.tasMode == 2
+        instance_create(0, 0, oPlayback)
     instance_destroy()
     exit
 }
@@ -43,6 +53,8 @@ if (keyboard_check_pressed(vk_right) || (keyboard_check(vk_right) && timer >= 24
     {
         case OPTIONTYPE_BOOL:
             status[selectedOption] = (!status[selectedOption])
+            if (status[selectedOption] == 1 && gp1[selectedOption] != -1)
+                status[gp1[selectedOption]] = 0
             break
         case OPTIONTYPE_INT:
             status[selectedOption]++
@@ -66,6 +78,8 @@ if (keyboard_check_pressed(vk_left) || (keyboard_check(vk_left) && timer >= 24 &
     {
         case OPTIONTYPE_BOOL:
             status[selectedOption] = (!status[selectedOption])
+            if (status[selectedOption] == 1 && gp1[selectedOption] != -1)
+                status[gp1[selectedOption]] = 0
             break
         case OPTIONTYPE_INT:
             status[selectedOption]--
