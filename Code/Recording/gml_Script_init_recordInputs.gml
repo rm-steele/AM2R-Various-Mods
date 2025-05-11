@@ -41,3 +41,4 @@ if initchar
     global.offsety = 0
 }
 popup_text("Rec Start")
+tasInitialized = 1

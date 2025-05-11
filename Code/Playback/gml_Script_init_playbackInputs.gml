@@ -8,7 +8,9 @@ control_read[30000] = 0
 if (!file_exists(filename))
 {
     popup_text("File not found")
-    instance_destroy()
+    global.tasMode = 0
+    file_text_close(fid)
+    exit
 }
 else
 {
@@ -47,3 +49,4 @@ else
     }
     popup_text("Playback Start")
 }
+tasInitialized = 1

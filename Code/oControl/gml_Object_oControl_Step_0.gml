@@ -3,14 +3,21 @@ if (fadedone >= 1 && room != rm_transition && room != rm_subscreen && room != it
     global.transitiontype = 0
     event_user(4)
 }
-if ((!init) && (!instance_exists(oPlayback)))
+if (!init)
 {
     if (os_type != os_android)
         check_keys()
     else
         touch_keys()
     if (room != rm_transition)
-        global_control()
+    {
+        if (global.tasMode != 2)
+            global_control()
+    }
+    if (global.tasMode == 1)
+        recordInputs()
+    else if (global.tasMode == 2)
+        playbackInputs()
     if (kExit && global.opexitkeyenable)
         game_end()
     if (kStart && kStartPushedSteps == 0)

@@ -20,10 +20,10 @@ if keyboard_check_pressed(vk_return)
         global.joydetected = 0
     oControl.init = 0
     room_change(19, 0) // go to the controller splash screen
-    if global.tasMode == 1
-        instance_create(0, 0, oRecord)
-    if global.tasMode == 2
-        instance_create(0, 0, oPlayback)
+    // if global.tasMode == 1
+    //     instance_create(0, 0, oRecord)
+    // if global.tasMode == 2
+    //     instance_create(0, 0, oPlayback)
     instance_destroy()
     exit
 }
