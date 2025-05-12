@@ -7,6 +7,12 @@ else
 // check keys
 if keyboard_check_pressed(vk_return)
 {
+    // get a random seed if the seed is set to -1, otherwise use the inputted seed
+    if (status[4] == -1)
+        randomize()
+    else
+        random_set_seed(status[4])
+
     // set the TAS mode based on the settings
     if status[0] == 1
         global.tasMode = 1
@@ -14,6 +20,7 @@ if keyboard_check_pressed(vk_return)
         global.tasMode = 2
 
     global.gameSpeed = status[2]
+    global.gameSpeedIsAbsolute = status[3]
     if joystick_exists(global.opjoyid)
         global.joydetected = 1
     else

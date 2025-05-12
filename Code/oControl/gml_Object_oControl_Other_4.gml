@@ -1,4 +1,8 @@
 writelog("Loading Room " + string(room))
+if ((string_count("rm_a", room_get_name(room)) > 0) || global.gameSpeedIsAbsolute)
+    room_speed = global.gameSpeed
+else
+    room_speed = 60
 if (room != rm_transition)
 {
     if (global.ingame == 1 && instance_number(oCharacter) == 0)

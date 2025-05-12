@@ -36,7 +36,6 @@ else
     }
     control_read[(frame_read + 1)] = "EOF"
     file_text_close(fid)
-    random_set_seed(1)
     if initchar
     {
         global.targetx = start_x

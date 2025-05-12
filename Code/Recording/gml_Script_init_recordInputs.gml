@@ -32,7 +32,6 @@ file_text_write_real(fid, start_state)
 file_text_writeln(fid)
 file_text_write_real(fid, start_facing)
 file_text_writeln(fid)
-random_set_seed(1)
 if initchar
 {
     global.targetx = start_x
