@@ -67,7 +67,7 @@ if (room == rm_controller)
     else if (global.tasMode == 2)
         init_playbackInputs()
 }
-// if (tasInitialized && (global.tasMode == 2 || global.tasMode == 3))
+// if (tasInitialized && (global.tasMode == 1 || global.tasMode == 2))
 // {
 //     file_text_write_string(log, "entered room " + room_get_name(room) + " on tas frame " + string(frame))
 //     file_text_writeln(log)
