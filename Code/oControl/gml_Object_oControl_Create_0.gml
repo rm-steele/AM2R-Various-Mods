@@ -194,5 +194,5 @@ shades[15] = 1;
 hndShades = shader_get_uniform(shGameBoy, "shades");
 walk_zone = 0
 tasInitialized = 0
-log = file_text_open_write("log.txt")
+// log = file_text_open_write("log.txt")
 infolevel = 3

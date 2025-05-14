@@ -5,7 +5,7 @@ if tasInitialized
         if (control_read[frame] == "EOF")
         {
             popup_text("Playback Finished")
-            file_text_close(log)
+            // file_text_close(log)
             global.tasMode = 0
             exit
         }
