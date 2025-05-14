@@ -1,0 +1,9 @@
+image_index = 1
+image_speed = 0
+hpush = 3
+vpush = -1.5
+damage = 150
+cooldown = 0
+alarm[0] = 5
+image_xscale = tas_choose(1, -1)
+pushdir = 0

@@ -66,7 +66,7 @@ switch (infolevel)
             debug_draw_var("xVelFrac: ", frac(oCharacter.xVel))
             debug_draw_var("yVelFrac: ", frac(oCharacter.yVel))
             debug_draw_var("platTimer: ", oCharacter.time)
-            debug_draw_var("rngSeed: ", random_get_seed())
+            debug_draw_var("rngSeed: ", global.rngSeed())
         }
     case 1:
         if (global.tasMode == 1 && tasInitialized)

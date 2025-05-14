@@ -1,0 +1,17 @@
+tile_layer_delete(-101)
+repeat (20)
+    make_explosion1big(tas_random(48), (32 + tas_random(176)))
+repeat (20)
+{
+    debr = instance_create(tas_random(48), (40 + tas_random(160)), oMetalDebrisBig)
+    debr.direction = tas_random_range(30, -30)
+    debr.speed = 2 + tas_random(3)
+    debr.alarm[0] = 90 + tas_random(60)
+}
+with (130192)
+    instance_destroy()
+with (130195)
+    instance_destroy()
+sfx_play(sndA4Expl)
+instance_create(-100, 104, oTank)
+instance_destroy()

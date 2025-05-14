@@ -1,0 +1,10 @@
+image_speed = 0.25
+targetx = x
+targety = y
+accel = 0.4
+maxspeed = 3
+followsamus = 1
+roaring = 0
+alarm[0] = 120 + tas_random(100)
+mealtimer = 0
+flash = 0
