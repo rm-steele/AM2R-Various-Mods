@@ -7,6 +7,7 @@ OPTIONTYPE_MSGBOX_INT = 3 // tracks an integer modified by getting input from a 
 global.gameSpeed = 60
 global.gameSpeedIsAbsolute = 1 // whether the game speed is modified in menus and transitions
 global.tasMode = 0 // 1 = recording, 2 = playback, to be expanded as needed
+global.startingRNGSeed = -1
 
 timer = 0 // timer for repeating inputs when option editing
 lastIndex = 4 // the index of the final item in the list
@@ -24,7 +25,7 @@ status[0] = 0
 status[1] = 0
 status[2] = 60
 status[3] = 1
-status[4] = 1
+status[4] = 3908393069 // this seed makes the first hornoad jump if you make 0 or 1 footstep sounds on the way there
 
 // their type
 type[0] = OPTIONTYPE_BOOL
@@ -41,7 +42,7 @@ gp1[0] = 1
 gp1[1] = 0
 gp1[2] = 1
 gp1[3] = -1
-gp1[4] = "Enter the seed for random numbers (0-10 digits, -1 = random seed)#Note that this is independent from the file's item randomization seed"
+gp1[4] = "Enter the seed for random numbers (0-10 digits, -1 = random seed)#Note that this is independent from the file's item randomization seed#This value is overwritten when playing back a recording."
 
 // bool: unused
 // int: maximum value

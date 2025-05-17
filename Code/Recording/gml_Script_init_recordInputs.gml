@@ -1,8 +1,11 @@
 filename = "rec.txt"
+// fid = file_text_open_write(filename)
 control_state = ""
 last_state = ""
+inputs[0] = ""
 frames_recorded = 0
 frame = 0
+/*
 start_room = -1
 start_x = -1
 start_y = -1
@@ -19,7 +22,7 @@ if instance_exists(oCharacter)
 }
 else
     initchar = 0
-fid = file_text_open_write(filename)
+
 file_text_write_real(fid, initchar)
 file_text_writeln(fid)
 file_text_write_real(fid, start_room)
@@ -39,5 +42,6 @@ if initchar
     global.targety = start_y
     global.offsety = 0
 }
+*/
 popup_text("Rec Start")
 tasInitialized = 1

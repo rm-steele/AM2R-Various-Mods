@@ -59,20 +59,20 @@ switch (infolevel)
             i = 0
             debug_draw_var("x: ", oCharacter.x)
             debug_draw_var("y: ", oCharacter.y)
-            debug_draw_var("deltaX: ", (oCharacter.x - oCharacter.xprevious))
-            debug_draw_var("deltaY: ", (oCharacter.y - oCharacter.yprevious))
+            // debug_draw_var("deltaX: ", (oCharacter.x - oCharacter.xprevious))
+            // debug_draw_var("deltaY: ", (oCharacter.y - oCharacter.yprevious))
             debug_draw_var("xVel: ", oCharacter.xVel)
             debug_draw_var("yVel: ", oCharacter.yVel)
-            debug_draw_var("xVelFrac: ", frac(oCharacter.xVel))
-            debug_draw_var("yVelFrac: ", frac(oCharacter.yVel))
-            debug_draw_var("platTimer: ", oCharacter.time)
-            debug_draw_var("rngSeed: ", global.rngSeed())
+            // debug_draw_var("xVelFrac: ", frac(oCharacter.xVel))
+            // debug_draw_var("yVelFrac: ", frac(oCharacter.yVel))
+            debug_draw_var("statetime: ", oCharacter.statetime) // included becasue when this hits 300 you can move when starting the game
+            debug_draw_var("rngSeed: ", global.rngSeed)
         }
     case 1:
         if (global.tasMode == 1 && tasInitialized)
         {
             draw_text_shadow((view_xview[0] + 4), (view_yview[0] + 224), control_state)
-            draw_text_shadow((view_xview[0] + 4), (view_yview[0] + 212), (string(frame) + " - " + string(frames_recorded)))
+            draw_text_shadow((view_xview[0] + 4), (view_yview[0] + 212), (string(frame) + " - " + string(frames_recorded) + " - " + string(reRecordCount)))
         }
         else if (global.tasMode == 2 && tasInitialized)
         {

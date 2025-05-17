@@ -10,8 +10,11 @@ if keyboard_check_pressed(vk_return)
     // get a random seed if the seed is set to -1, otherwise use the inputted seed
     if (status[4] == -1)
         randomize()
-    
+    else
+        random_set_seed(status[4])
+
     global.rngSeed = random_get_seed() // set the RNG seed for use in the custom RNG functions
+    global.startingRNGSeed = global.rngSeed
 
     // set the TAS mode based on the settings
     if status[0] == 1

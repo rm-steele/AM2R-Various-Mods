@@ -19,12 +19,12 @@ if tasInitialized
     control_state += string(kMenu2)
     if (control_state != last_state)
     {
-        file_text_write_string(fid, string(frame))
-        file_text_writeln(fid)
-        file_text_write_string(fid, control_state)
-        file_text_writeln(fid)
+        inputs[frame] = control_state
         frames_recorded += 1
     }
+    else
+        inputs[frame] = ""
+
     frame += 1
     last_state = control_state
 }

@@ -15,6 +15,7 @@ if (!file_exists(filename))
 else
 {
     fid = file_text_open_read(filename)
+    /*
     initchar = file_text_read_real(fid)
     file_text_readln(fid)
     start_room = file_text_read_real(fid)
@@ -27,6 +28,9 @@ else
     file_text_readln(fid)
     start_facing = file_text_read_real(fid)
     file_text_readln(fid)
+    */
+    global.rngSeed = file_text_read_real(fid)
+    file_text_readln(fid)
     while (!file_text_eof(fid))
     {
         frame_read = file_text_read_real(fid)
@@ -36,6 +40,7 @@ else
     }
     control_read[(frame_read + 1)] = "EOF"
     file_text_close(fid)
+    /*
     if initchar
     {
         global.targetx = start_x
@@ -46,6 +51,7 @@ else
         global.camstarty = start_y
         room_goto(start_room)
     }
+    */
     popup_text("Playback Start")
 }
 tasInitialized = 1
