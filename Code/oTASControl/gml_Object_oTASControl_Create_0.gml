@@ -25,7 +25,7 @@ status[0] = 0
 status[1] = 0
 status[2] = 60
 status[3] = 1
-status[4] = 3908393069 // this seed makes the first hornoad jump if you make 0 or 1 footstep sounds on the way there
+status[4] = 0 // set to 0 for vanilla compatibility
 
 // their type
 type[0] = OPTIONTYPE_BOOL
