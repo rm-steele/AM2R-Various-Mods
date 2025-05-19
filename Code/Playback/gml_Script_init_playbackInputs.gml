@@ -1,3 +1,6 @@
+var lastFrame;
+
+lastFrame = 0
 filename = "rec.txt"
 control_state = ""
 last_state = "0"
@@ -35,6 +38,12 @@ else
     {
         frame_read = file_text_read_real(fid)
         file_text_readln(fid)
+            while (lastFrame < frame_read)
+            {
+                control_read[lastFrame] = ""
+                lastFrame++
+            }
+            lastFrame++
         control_read[frame_read] = file_text_read_string(fid)
         file_text_readln(fid)
     }
